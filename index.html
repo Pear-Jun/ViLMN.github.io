@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ViLMN: A Large-scale Dataset for Quadrupedal Robot Vision-Language Manipulation and Navigation</title>
+    
+    <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+    <link rel="stylesheet" href="./static/css/bulma.min.css">
+    <link rel="stylesheet" href="./static/css/slick.css">
+    <link rel="stylesheet" href="./static/css/slick-theme.css">
+    <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+    <link rel="stylesheet" href="./static/css/index.css">
+    <link rel="icon" href="./static/images/favicon.svg">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script defer src="./static/js/fontawesome.all.min.js"></script>
+    <script src="./static/js/slick.min.js"></script>
+    <script src="./static/js/index.js"></script>
+</head>
+
+
+<body>
+
+    <section class="hero">
+        <div class="hero-body">
+            <div class="container is-max-desktop">
+                <div class="columns is-centered">
+                    <div class="column has-text-centered">
+                        <h1 class="title is-2 publication-title">ViLMN: A Large-scale Dataset for Quadrupedal Robot Vision-Language Manipulation and Navigation</h1>
+
+<div class="is-size-5 publication-authors">
+    <span class="author-block">Yukun Wu,</span>
+    <span class="author-block">Lijun,</span>
+    <span class="author-block">Zhang Min,</span>
+    <span class="author-block">Pengxiang Ding,</span><br>
+    <span class="author-block">Han Zhao,</span>
+    <span class="author-block">Zhiming Zhang,</span>
+    <span class="author-block">Zhitao Wang,</span>
+    <span class="author-block">Zhenyu Wei,</span>
+    <span class="author-block">Donglin Wang</span>
+</div>
+                        <div class="column has-text-centered">
+                            <div class="publication-links">
+                                <!-- Talk Link. -->
+                                <span class="link-block">
+                                    <a href="https://en.westlake.edu.cn/"
+                                        class="external-link button is-normal is-rounded is-dark">
+                                        <span class="icon">
+                                            <i class="fab fa-youtube" style="color: #eb3d3d;"></i>
+                                        </span>
+                                        <span>Video</span>
+                                    </a>
+                                </span>
+                                <!-- Code Link. -->
+                                <span class="link-block">
+                                    <a href="https://github.com/Pear-Jun/ViLMN"
+                                        class="external-link button is-normal is-rounded is-dark">
+                                        <span class="icon">
+                                        <i class="fab fa-github-alt" style="color: #6f5cff;"></i>
+                                        </span>
+                                        <span>Code</span>
+                                    </a>
+                                </span>
+                                <!-- Dataset Link. -->
+                                <span class="link-block">
+                                    <a href="https://github.com/robodhruv/visualnav-transformer#data-wrangling"
+                                        class="external-link button is-normal is-rounded is-dark">
+                                        <span class="icon">
+                                            <i class="fas fa-database" style="color: #367df7;"></i> </span> 
+                                        <span>Data</span>
+                                    </a>
+                                </span>
+
+                                <!-- Arxiv -->
+                                <span class="link-block">
+                                    <a href="./static/ViLMN.bib"
+                                        class="external-link button is-normal is-rounded is-dark">
+                                        <span class="icon">
+                                            <i class="ai ai-arxiv" style="color: #eb3d3d;"></i> </span>
+                                        <span>Arxiv</span>
+                                    </a>
+                                </span>
+
+                            </div>
+                        </div>    
+    <div style="text-align: center;">
+    <img src="static/images/11.jpeg" alt=" The overview of our proposed CLIPoint method" style="width: 900px;">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+    </section>
+    <section class="hero teaser">
+        <div class="container is-max-desktop is-centered has-text-justified is-size-5.5">
+            <div class="hero-body">
+                <h2 class="title is-4">Abstract</h2>
+                <p>
+In recent years, quadruped robots have emerged as compelling alternatives to traditional robotic systems and have become increasingly active across various fields, such as navigation, express delivery, food delivery and so on. Transformer-based models pretrained on large-scale datasets have demonstrated significant success in numerous domains, however, research progresses have encountered a deceleration in the context of quadruped robots. The primary reason for this phenomenon is the absence of a comprehensive and diverse quadruped dataset. To expedite the integration of quadrupeds into real-world scenarios, in this paper, we present a new benchmark for quadrupedal robot Vision-Language Manipulation and Navigation (ViLMN), which is collected from the real quadruped robot involving indoor and outdoor scenes. Specifically, ViLMN contains 20K trajectories spanning more than 43 diverse tasks. Each trajectory contains task-specific languages and rich multi-modal data, incorporating visual inputs, depth information, robot state parameters and various action sequences. Action sequential information encompasses not only low-level joint positions but also high-level joystick commands provided by a human presenter. We open-source all codes of our benchmark and hope that the proposed ViLMN serves as a valuable resource to facilitate future research on manipulation and navigation tasks for quadruped robots.
+                </p>
+            </div>
+        </div>
+
+    </section>
+    
+ <!-- Results Carousel -->
+    <section class="hero is-light is-small">
+        <div class="hero-body">
+            <div class="container">
+                    <div class="content has-text-justified">
+                <p>
+                    ViLMN collected information on the quadruped robot platform, including RGB cameras, depth cameras, LiDAR, IMU, and foot joint information. We provide ROSBAG that covers this information for everyone to use, and each useful data segment has been segmented. In addition, if it is necessary to use our baseline model for reproduction, we have provided our own data processing methods. The detailed usage methods are available in the GitHub repository.
+                    <p>
+                </div>
+                <div id="results-carousel" class="carousel results-carousel">
+                    <div class="item item-1">
+                        <img src="static/pic/1.png" alt="Image 1" class="carousel-image">
+                        <center>
+                            <p class="is-size-7"><b>Navigation:</b> Find  triangular pattern
+                            </p>
+                        </center>
+                    </div>
+                    <div class="item item-2">
+                        <img src="static/pic/2.png" alt="Image 2" class="carousel-image">
+                        <center>
+                            <p class="is-size-7"><b>Navigation:</b> Find C box
+                            </p>
+                        </center>
+                    </div>
+                    <div class="item item-3">
+                        <img src="static/pic/3.png" alt="Image 3" class="carousel-image">
+                        <center>
+                            <p class="is-size-7"><b>Navigation:</b> Find red ball
+                            </p>
+                        </center>
+                    </div>
+                    <div class="item item-4">
+                        <img src="static/pic/4.png" alt="Image 4" class="carousel-image">
+                        <center>
+                            <p class="is-size-7"><b>Navigation:</b> Bypass obstacles and find red ball
+                            </p>
+                        </center>
+                    </div>
+                    <div class="item item-5">
+                        <img src="static/pic/5.png" alt="Image 5" class="carousel-image">
+                        <center>
+                            <p class="is-size-7"><b>Navigation:</b> Bypass obstacles to find  blue ball
+                            </p>
+                        </center>
+                    </div>
+                    <div class="item item-6">
+                        <img src="static/pic/6.png" alt="Image 6" class="carousel-image">
+                        <center>
+                            <p class="is-size-7"><b>Navigation:</b> Bypass obstacles and find A box
+                            </p>
+                        </center>
+                    </div>
+                    <div class="item item-7">
+                        <img src="static/pic/7.png" alt="Image 7" class="carousel-image">
+                        <center>
+                            <p class="is-size-7"><b>Manipulation:</b> Block red ball
+                            </p>
+                        </center>
+                    </div>
+                    <div class="item item-8">
+                        <img src="static/pic/8.png" alt="Image 8" class="carousel-image">
+                        <center>
+                            <p class="is-size-7"><b>Manipulation:</b> Block blue ball
+                            </p>
+                        </center>
+                    </div>
+                    <div class="item item-9">
+                        <img src="static/pic/9.png" alt="Image 9" class="carousel-image">
+                        <center>
+                            <p class="is-size-7"><b>Manipulation:</b> Cross triangle door
+                            </p>
+                        </center>
+                    </div>
+                    <div class="item item-10">
+                        <img src="static/pic/10.png" alt="Image 10" class="carousel-image">
+                        <center>
+                            <p class="is-size-7"><b>Navigation:</b> Find  schoolbag
+                            </p>
+                        </center>
+                    </div>
+                    <div class="item item-11">
+                        <img src="static/pic/11.png" alt="Image 11" class="carousel-image">
+                        <center>
+                            <p class="is-size-7"><b>Manipulation:</b> Push C box into a door
+                            </p>
+                        </center>
+                    </div>
+                    <div class="item item-12">
+                        <img src="static/pic/12.png" alt="Image 12" class="carousel-image">
+                        <center>
+                            <p class="is-size-7"><b>Manipulation:</b> Push two boxes
+                            </p>
+                        </center>                        
+                    </div>
+                    <div class="item item-13">
+                        <img src="static/pic/13.png" alt="Image 13" class="carousel-image">
+                        <center>
+                            <p class="is-size-7"><b>Manipulation:</b> Push three boxes
+                            </p>
+                        </center>  
+                    </div>
+                    <div class="item item-14">
+                        <img src="static/pic/14.png" alt="Image 14" class="carousel-image">
+                        <center>
+                            <p class="is-size-7"><b>Manipulation:</b> Bypass obstacles and find circular pattern
+                            </p>
+                        </center>
+                    </div>
+                    <div class="item item-15">
+                        <img src="static/pic/15.png" alt="Image 15" class="carousel-image">
+                        <center>
+                            <p class="is-size-7"><b>Manipulation:</b> Bypass obstacles and find circular pattern
+                            </p>
+                        </center>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </section>
+
+<!-- <script>
+    var items = document.querySelectorAll('.carousel .item');
+    var currentIndex = 0;
+    var interval = 3000;
+    function autoSwitch() {
+        items[currentIndex].classList.remove('active');
+        currentIndex = (currentIndex + 1) % items.length;
+        items[currentIndex].classList.add('active');
+    }
+    setInterval(autoSwitch, interval);
+</script> -->
+
+
+
+  <section class="section">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+
+        <div class="column">
+          <h2 class="title is-3">ViLMN Architecture</h2>
+          <div class="content has-text-justified">
+            <p>
+              ViLMN has up to 43 tasks, which can be divided into navigation tasks and manipulation tasks. In addition, based on different interfering factors, we have expanded 43 tasks to 69 scenarios, which will be beneficial for the training of various robot models.
+            </p>
+    <div style="display: flex; justify-content: center;">
+    <img src="static/images/architecture.png" alt="ViLMN Architecture" style="width: 900px;" />
+    </div>
+          </div>
+        </div>
+      </div>
+      <div class="column is-centered has-text-centered">
+        <h2 class="title is-3">Learning from ViLMN</h2>
+        <div class="content has-text-justified">
+          <p>
+To evaluate the efficiency of the ViLMN dataset, we propose a baseline model, CLIPoint, which integrates the robust semantic understanding of the CLIP model with global information derived from LiDAR. The model pipeline is shown in the figure. To align the point cloud with language prompts and RGB observation, we project the 3D point cloud data onto a 2D BEV map, where depth is represented without color information.
+          </p>
+    <div style="display: flex; justify-content: center;">
+    <img src="static/images/overview.png" alt="Learning from ViLMN" style="width: 600px;" />
+    </div>
+        </div>
+  </section>
+
+
+    <!-- People using GNM -->
+    <section class="hero is-light is-small">
+    <div class="hero-body">
+        <div class="container is-max-desktop">
+      <center>
+        <h2 class="title is-3">Experimental phenomena</h2>
+      </center>
+      <br>
+      <div class="columns is-centered has-text-centered">
+        <!-- Manipulation. -->
+        <div class="column">
+          <h2 class="title is-4">Manipulation Task</h2>
+          <div class="content has-text-justified">
+            <!-- <p>
+              ViNT exhibits implicit <i>preferences</i> for following paved roads and narrow hallways while searching
+              previously unseen environments, enabling efficient exploration.
+            </p> -->
+            <img src="static/images/cz.png" alt="Image 17" style="">
+          </div>
+        </div>
+        <!--/ Manipulation. -->
+
+        <!-- Navigation. -->
+        <div class="column">
+          <h2 class="title is-4">Navigation Task</h2>
+          <div class="content is-centered has-text-justified">
+            <!-- <p>
+              ViNT can successfully navigate around a crowd of dynamic pedestrians and reach the goal behind them,
+              despite its simple self-supervised training objective.
+            </p> -->
+            <img src="static/images/dh.png" alt="Image 18" >
+          </div>
+        </div>
+
+            </div>
+        </div>
+    </div>
+
+
+
+            <!-- <div class="container">
+                <div class="columns is-centered has-text-centered">
+                    <div class="column is-four-fifths">
+                        <h2 class="title is-3">General Navigation Models <i>in-the-wild</i></h2>
+                    </div>
+                </div>
+                    <div class="container is-max-desktop">
+                        <div class="columns is-centered has-text-centered">
+                            <div class="column is-four-fifths">
+                                <div class="content has-text-justified">
+                                    <p>
+                                        GNM, ViNT, and NoMaD are available as ready-to-deploy navigation policies, and
+                                        have already been
+                                        used by researchers around the world on their own robots and environments. <br>
+                                        <br>
+                                        <b>Used GNM-family of models in your research?</b> <span
+                                            class="publication-authors">
+                                            <a href="mailto:shah@cs.berkeley.edu" class="external-link">Send
+                                                us a video of
+                                                your robot in action</a> </span>, and we'll add
+                                        it below! We love to see our models in the wild.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div> -->
+
+                <div id="results-carousel" class="carousel results-carousel">
+                    <div class="item item-tambet1">
+                        <video poster="" id="tambet1" autoplay controls muted loop playsinline height="50%">
+                            <source src="static/videos/blue.mp4" type="video/mp4">
+                        </video>
+                        <!-- <center>
+                            <p class="is-size-7"><b>Courtesy:</b> Tambet Matiisen, University of Tartu (Estonia)
+                            </p>
+                        </center> -->
+                    </div>
+                    <div class="item item-lauri5">
+                        <video poster="" id="lauri5" autoplay controls muted loop playsinline height="50%">
+                            <source src="static/videos/red2.mp4"
+                                type="video/mp4">
+                        </video>
+                        <!-- <center>
+                            <p class="is-size-7"><b>Courtesy:</b> Lauri Suomela, Tampere University (Finland)
+                            </p>
+                        </center> -->
+                    </div>
+                    <div class="item item-lauri2">
+                        <video poster="" id="lauri2" autoplay controls muted loop playsinline height="50%">
+                            <source src="static/videos/blue.mp4"
+                                type="video/mp4">
+                        </video>
+                        <!-- <center>
+                            <p class="is-size-7"><b>Courtesy:</b> Lauri Suomela, Tampere University (Finland)
+                            </p>
+                        </center> -->
+                    </div>
+                    <div class="item item-nate1">
+                        <video poster="" id="nate1" autoplay controls muted loop playsinline height="100%">
+                            <source src="static/videos/red2.mp4" type="video/mp4">
+                        </video>
+                        <!-- <center>
+                            <p class="is-size-7"><b>Courtesy:</b> Nathaniel Simon, Princeton University (USA)
+                            </p>
+                        </center> -->
+                    </div>
+                    <div class="item item-lauri1">
+                        <video poster="" id="lauri1" autoplay controls muted loop playsinline height="100%">
+                            <source src="static/videos/blue.mp4" type="video/mp4">
+                        </video>
+                        <!-- <center>
+                            <p class="is-size-7"><b>Courtesy:</b> Lauri Suomela, Tampere University (Finland)
+                            </p>
+                        </center> -->
+                    </div>
+                    <div class="item item-lauri3">
+                        <video poster="" id="lauri3" autoplay controls muted loop playsinline height="100%">
+                            <source src="static/videos/blue.mp4" type="video/mp4">
+                        </video>
+                        <!-- <center>
+                            <p class="is-size-7"><b>Courtesy:</b> Lauri Suomela, Tampere University (Finland)
+                            </p>
+                        </center> -->
+                    </div>
+                    <div class="item item-tambet2">
+                        <video poster="" id="tambet2" autoplay controls muted loop playsinline height="100%">
+                            <source src="static/videos/blue.mp4" type="video/mp4">
+                        </video>
+                        <!-- <center>
+                            <p class="is-size-7"><b>Courtesy:</b> Tambet Matiisen, University of Tartu (Estonia)
+                            </p>
+                        </center> -->
+                    </div>
+                    <div class="item item-lauri4">
+                        <video poster="" id="lauri4" autoplay controls muted loop playsinline height="100%">
+                            <source src="static/videos/red2.mp4" type="video/mp4">
+                        </video>
+                        <!-- <center>
+                            <p class="is-size-7"><b>Courtesy:</b> Lauri Suomela, Tampere University (Finland)
+                            </p>
+                        </center> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <br>
+    <center class="is-size-10">
+      The website (<a href="https://github.com/general-navigation-models/general-navigation-models.github.io">source code</a>) design was adapted from <a href="https://nerfies.github.io" class="external-link"><span
+                class="dnerf">Nerfies</span></a>.
+    </center>
+    <br>
+</body>
+
+</html>
